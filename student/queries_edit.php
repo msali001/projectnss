@@ -231,6 +231,6 @@ function ValidateForm(){
  }
 </script>
 <?
-	echo"<script>form1.faculty.value='".get_staffname($row['staffid'])."';</script>";
+	echo"<script>form1.faculty.value='".get_staffname($con,$row['staffid'])."';</script>";
 ?>
 </html>
