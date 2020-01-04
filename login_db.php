@@ -4,7 +4,7 @@
 	include("./config.php");
 	include("./function.php");
 	$user=$_POST['user'];
-	$pass=$_POST['pass'];
+	$pass=md5($_POST['pass']);
 	$category=$_POST['category'];
 	if($category=="student")
 	{
