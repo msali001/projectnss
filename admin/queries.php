@@ -61,11 +61,11 @@
         <td colspan="3"><div align="center">
         <?
 			include("./config.php");
-			echo"<table border=0 id=border width=95%><tr><td id=border align=center>Query Subject</td><td id=border align=center>Date</td><td id=border align=center>Student</td><td id=border align=center>Faculty</td><td id=border align=center>Status</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
+			echo"<table border=0 id=border width=95%><tr><td id=border align=center>Query Subject</td><td id=border align=center>Date</td><td id=border align=center>Faculty</td><td id=border align=center>Status</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
 			$result=mysqli_query($con,"select * from query order by querydate desc");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center>".$row['studid']."</td><td align=center>".$row['staffid']."</td><td align=center>".$row['querystatus']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center>".$row['staffid']."</td><td align=center>".$row['querystatus']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>
@@ -131,7 +131,7 @@
 						$result=mysqli_query($con,"select * from staff order by staffsurname");
                         while($row=mysqli_fetch_array($result))
                         {
-                  			echo"<option>".$row['staffsurname']." ".$row['stafffirstname']."</option>";      
+                  			echo "<option value=\"".$row['staffid']."\">".$row['staffsurname']." ".$row['stafffirstname']."</option>";      
                         }
 				?>
                 </select>

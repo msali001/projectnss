@@ -82,43 +82,18 @@
                 </div></td>
                 <td>&nbsp;</td>
               </tr>
-              <tr>
-                <td><div align="right" class="style4">Faculty  :&nbsp;</div></td>
-                <td><div align="left">
-                    <?=$row['staffid']; ?>
-                </div></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td><div align="right"><strong>Student :&nbsp;</strong></div></td>
-                <td><div align="left">
-                  <?=$row['studid']; ?>
-                </div></td>
-                <td>&nbsp;</td>
-              </tr>
+              
               <tr>
                 <td height="37" colspan="3"><div align="center">
                     
-                    <input type="button" name="button2" id="but_sub" value="Cancel" onclick="location.href='./queries.php'" />
+                    <input type="button" name="button2" id="but_sub" value="Go Back" onclick="location.href='./home.php'" />
                     </label>
                 </div></td>
               </tr>
               <tr>
                 <td colspan="3"><hr size="1px" color="#990000" width="95%"></td>
               </tr>
-              <tr>
-                <td height="37" colspan="3"><div align="center"><span class="style3">: Reply : </span></div></td>
-              </tr>
               
-              <tr>
-                <td height="37" colspan="3"><div align="center">
-                  <table width="50%" border="0" cellspacing="0" cellpadding="0" style="border:solid 1px #990000">
-                    <tr>
-                      <td><div align="center" style="margin:10px"><?=$row['queryreply']; ?></div></td>
-                    </tr>
-                  </table>
-                </div></td>
-              </tr>
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

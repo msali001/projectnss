@@ -90,7 +90,7 @@
 						$result=mysqli_query($con,"select * from staff order by staffsurname");
                         while($row=mysqli_fetch_array($result))
                         {
-                  			echo"<option>".$row['staffsurname']." ".$row['stafffirstname']."</option>";      
+                  			echo "<option value=\"".$row['staffid']."\">".$row['staffsurname']." ".$row['stafffirstname']."</option>";
                         }
 				?>
                     </select>

@@ -82,73 +82,20 @@
                 </div></td>
                 <td>&nbsp;</td>
               </tr>
-              <tr>
-                <td><div align="right" class="style4">Faculty  :&nbsp;</div></td>
-                <td><div align="left">
-                    <?=$row['staffid']; ?>
-                </div></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td><div align="right"><strong>Student :&nbsp;</strong></div></td>
-                <td><div align="left">
-                  <?=$row['studid']; ?>
-                </div></td>
-                <td>&nbsp;</td>
-              </tr>
+              
               <tr>
                 <td height="37" colspan="3"><div align="center">
                     
-                    <input type="button" name="button2" id="but_sub" value="Cancel" onclick="location.href='./queries.php'" />
+                    <input type="button" name="button2" id="but_sub" value="Go Back" onclick="location.href='./queries.php'" />
                     </label>
                 </div></td>
               </tr>
               <tr>
                 <td colspan="3"><hr size="1px" color="#990000" width="95%"></td>
               </tr>
-              <tr>
-                <td height="37" colspan="3"><div align="center"><span class="style3">: Reply : </span></div></td>
-              </tr>
               
-              <tr>
-                <td height="37" colspan="3"><div align="center">
-                  <table width="50%" border="0" cellspacing="0" cellpadding="0" style="border:solid 1px #990000">
-                    <tr>
-                      <td><div align="center" style="margin:10px"><?=$row['queryreply']; ?></div></td>
-                    </tr>
-                  </table>
-                </div></td>
-              </tr>
-              <?
-              if($row['queryreply']=="")
-              {
-			  echo"
-              <tr>
-                <td height=20 colspan=3><hr size=1px color=#CCCCCC></td>
-              </tr>
               
-              <tr>
-                <td height=21 colspan=3><div align=\"center\"><span class=\"style2\">Reply Query</span></div></td>
-              </tr>
-              <form id=\"form1\" name=\"form1\" method=\"post\" action=\"./queries_reply_db.php\">
-              <input type=\"hidden\" name=\"id\" value=".$_GET['id'].">
-              <tr>
-                <td height=21 colspan=3><div align=\"center\">
-                    <label>
-                      <textarea name=\"reply\" id=\"textarea\" cols=\"45\" rows=\"5\"></textarea>
-                      </label>
-                  </div></td>
-              </tr>
-              <tr>
-                <td height=\"21\" colspan=\"3\"><div align=\"center\">
-                  <label>
-                  <input type=\"submit\" name=\"button\" id=\"but_sub\" value=\"Reply\" />
-                  </label>
-                </div></td>
-              </tr>
-              </form>";
-			  	}
-              ?>
+              
               <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

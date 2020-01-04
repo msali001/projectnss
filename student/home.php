@@ -56,7 +56,7 @@
                     <table border="0" width="283px" align="center" style="margin:5px;">
                       <?
 			include("./config.php");
-			$result=mysqli_query($con,"select * from query where studid='".$_SESSION['cuser']."' order by querydate desc limit 0,5");
+			$result=mysqli_query($con,"select * from query order by querydate");
 			if(mysqli_num_rows($result)>0)
 			{
 				while($row=mysqli_fetch_array($result))
@@ -69,7 +69,6 @@
 						echo"<tr><td align=center width=25%>No Any Queries</td></tr>";
 			}	
 		?>
-              	<tr><td align="center"><strong><a href="./queries.php">More..</a></strong></td></tr>
                 </table>
                 </div></td>
               </tr>
