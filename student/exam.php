@@ -125,14 +125,18 @@
                 <td width="338" height="40"><div align="right" class="style1"><strong>Exam Subject :&nbsp; </strong></div></td>
                 <td width="217"><div align="left">
                     <select name="sub" id="subject" style="width:200px">
-                      <option value="ACCOUNT" selected="selected">ACCOUNT</option>
-                      <option value="ECONOMICS">ECONOMICS</option>
-                      <option value="MATHS">MATHS</option>
-                      <option value="SCIENCE">SCIENCE</option>
-                      <option value="JAVA">JAVA</option>
-                      <option value="PHP">PHP</option>
-                      <option value="ENGLISH">ENGLISH</option>
-                      <option value="MSOFFICE">MSOFFICE</option>
+                      <option value="Computer fundamentals and html">Computer fundamentals and html</option>
+                            <option value="Problem solving using c">Problem solving using c</option>
+                            <option value="Data structure using c">Data structure using c</option>
+                            <option value="Database management system and rdbms">Database management system and rdbms</option>
+                            <option value="Java programming">Java programming</option>
+                            <option value="Web programming using php">Web programming using php</option>
+                            <option value="Computer organization and architecture">Computer organization and architecture</option>
+                            <option value="Principles of software engineering   ">Principles of software engineering</option>
+                            <option value="Android programming">Android programming</option>
+                            <option value="Computer network">Computer network</option>
+                            <option value="System software">System software</option>
+                            <option value="Operating system">Operating system</option>
                     </select>
                 </div></td>
                 <td width="347"><input type="submit" name="but_sub" id="but_sub" value="START" /></td>
