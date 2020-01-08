@@ -64,6 +64,7 @@
                     <select name="category" style="width:150px">
                       <option value="student" selected="selected">Student</option>
                       <option value="staff">Faculty</option>
+		      <option value="admin">Admin</option>
                               </select>
 
                   </div></td>

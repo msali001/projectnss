@@ -7,5 +7,5 @@
 	$_SESSION['cuser']="";
 	$_SESSION['role']="";
 	session_destroy();
-	header("location: ./index.php");
+	header("location: ../index.php");
 ?>

@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                           <td colspan="3"><div align="center"><strong>Exam Date &amp; Time :</strong><strong>
-                            <?=$date." ".$time; ?>
+                            <?=$date." &amp; ".$time; ?>
                           </strong></div></td>
                         </tr>
                         <tr>
@@ -98,22 +98,7 @@
                           <td colspan="3"><div align="center"><strong>Wrong Answers : <?=$f; ?>
                           </strong></div></td>
                         </tr>
-                        <tr>
-                          <td><div align="right"><strong>Progress :&nbsp;</strong></div></td>
-                          <td width="194"><div align="left">
-                          <table width="195" height="18" border="0" style="border:solid 1px #990000" cellpadding="0" cellspacing="1">
-                            <tr>
-                              <td><table width="<?=$per; ?>%" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                  <td bgcolor="#CC6600">&nbsp;</td>
-                                </tr>
-                              </table></td>
-                            </tr>
-                          </table></div></td>
-                          <td width="194"><div align="left">&nbsp;<strong>
-                            <?=$per; ?>
-                            %</strong></div></td>
-                        </tr>
+                        
                         <tr>
                           <td>&nbsp;</td>
                           <td><div align="center">

@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td id="head_txt"><div align="right"><img src="images/query.png" alt="query" width="32" height="33" /></div></td>
-        <td colspan="2" id="head_txt"><div align="left" class="style3">&nbsp;Query Management</div></td>
+        <td colspan="2" id="head_txt"><div align="left" class="style3">&nbsp;Notification Management</div></td>
         </tr>
       <tr>
         <td colspan="3"><hr color="#990000" size="1px"></td>
@@ -54,7 +54,7 @@
       <tr>
         <td height="50">&nbsp;</td>
         <td width="35" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" width="25" height="25" border="0"></a></div></td>
-        <td width="774" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Query</strong></a></div></td>
+        <td width="774" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Notification</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -67,9 +67,8 @@
               <td width=854 id="box_mid">
               <table width="100%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="25%" style="border-right:solid 1px #CC0000;"><div align="center">Query Subject</div></td>
+                  <td width="25%" style="border-right:solid 1px #CC0000;"><div align="center">Notification Subject</div></td>
                   <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Date</div></td>
-                  <td width="15%" style="border-right:solid 1px #CC0000;"><div align="center">Status</div></td>
                   <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Detail</div></td>
                   <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Edit</div></td>
                   <td width="10%"><div align="center">Delete</div></td>                  
@@ -86,7 +85,7 @@
 					$result=mysqli_query($con,"select * from query order by querydate desc");
 					while($row=mysqli_fetch_array($result))
 					{
-						echo"<tr><td align=center width=25%><a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']."</td><td align=center width=12%>".$row['querystatus']."</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+						echo"<tr><td align=center width=25%>".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']."</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 					}
 			
 				?>

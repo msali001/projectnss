@@ -41,7 +41,7 @@
         <td colspan="3">&nbsp;</td>
       </tr>
       <tr>
-        <td colspan="3" id="head_txt"><div align="center">Query Management</div></td>
+        <td colspan="3" id="head_txt"><div align="center">Notification Management</div></td>
       </tr>
       <tr>
         <td colspan="3"><hr color="#CCCCCC" size="1px"></td>
@@ -52,7 +52,7 @@
       <tr>
         <td>&nbsp;</td>
         <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
-        <td width="766" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Query</strong></a></div></td>
+        <td width="766" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Notification</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -61,11 +61,11 @@
         <td colspan="3"><div align="center">
         <?
 			include("./config.php");
-			echo"<table border=0 id=border width=95%><tr><td id=border align=center>Query Subject</td><td id=border align=center>Date</td><td id=border align=center>Faculty</td><td id=border align=center>Status</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
+			echo"<table border=0 id=border width=95%><tr><td id=border align=center>Notification Subject</td><td id=border align=center>Date</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
 			$result=mysqli_query($con,"select * from query order by querydate desc");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center>".$row['staffid']."</td><td align=center>".$row['querystatus']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>
@@ -91,13 +91,13 @@
             <td colspan="3" id="head_txt">&nbsp;</td>
           </tr>
           <tr>
-            <td colspan="3" id="head_txt">Add Query</td>
+            <td colspan="3" id="head_txt">Add Notification</td>
           </tr>
           <tr>
             <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
           </tr>
           <tr>
-            <td width="396"><div align="right" class="style1">Query Subject : </div></td>
+            <td width="396"><div align="right" class="style1">Notification Subject : </div></td>
             <td width="412"><div align="left"><span id="sprytextfield1">
               <label>
                 <input name="subject" type="text" size="35" />
@@ -106,7 +106,7 @@
 	            <td width="92">&nbsp;</td>
           </tr>
           <tr>
-            <td><div align="right" class="style1">Query Date : </div></td>
+            <td><div align="right" class="style1">Notification Date : </div></td>
             <td><div align="left">
 <span id="sprytextfield2">
 <input type="text" name="txtDate" maxlength="10" size="15" value="" />
@@ -114,7 +114,7 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td><div align="right" class="style1">Query Text : </div></td>
+            <td><div align="right" class="style1">Notification Text : </div></td>
             <td><div align="left"><span id="sprytextarea1">
               <label>
                 <textarea name="query_text" cols="35" rows="4" id="textfield3"></textarea>

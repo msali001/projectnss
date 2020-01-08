@@ -76,11 +76,18 @@
 <table border="0" align="left" style="margin-left:25px;" width="95%">
 	<?
 		$i=1;
+		$is_exam = false;
 		while($row=mysqli_fetch_array($result))
 		{
+		$is_exam = true;
 	    	echo"<tr><td align=left width=2%><b>".$i.".</b></td><td align=left><b>".$row['quetext']."</b></td></tr><tr><td></td><td align=left><input type=radio name=".$row['queid']." value=1>".$row['queans1']."</td></tr><tr><td></td><td align=left><input type=radio name=".$row['queid']." value=2>".$row['queans2']."</td></tr><tr><td></td><td align=left><input type=radio name=".$row['queid']." value=3>".$row['queans3']."</td></tr><tr><td></td><td align=left><input type=radio name=".$row['queid']." value=4>".$row['queans4']."</td></tr>";
 			$i++;
 		}
+		if(!$is_exam) {
+		        echo "<h4>No Exam Currently</h1>";
+	        }
+	        else{
+		        
 	?>
     <tr><td height="41"></td>
     <td>
@@ -89,6 +96,7 @@
         </div></td>
     <td>&nbsp;</td>
     </tr>
+    <? } ?>
 </table>
 </form>
               </div></td>

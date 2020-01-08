@@ -70,7 +70,7 @@
               <td width="793px" id="box_mid"><table width="100%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
                     <td width="35%" style="border-right:solid 1px #CC0000;"><div align="center">Assignment Title</div></td>
-                    <td width="11%" style="border-right:solid 1px #CC0000;"><div align="center">Date</div></td>
+                    <td width="11%" style="border-right:solid 1px #CC0000;"><div align="center">Last Date</div></td>
                     <td width="16%" style="border-right:solid 1px #CC0000;"><div align="center">Faculty</div></td>
                     <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Detail</div></td>
                     <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Edit</div></td>
@@ -123,14 +123,14 @@
             <td colspan="3" id="head_txt3"><hr color="#990000" size="1px" width="95%" /></td>
           </tr>
           <tr>
-            <td width="396"><div align="right" class="style1"><strong>Assignment Title :&nbsp; </strong></div></td>
+            <td width="396"><div align="right" class="style1"><strong>Title :&nbsp; </strong></div></td>
             <td width="345"><div align="left"><span id="sprytextfield1">
               <input name="title" type="text" size="35" />
               <span class="textfieldRequiredMsg">*</span></span></div></td>
 	            <td width="159">&nbsp;</td>
           </tr>
           <tr>
-            <td height="29"><div align="right" class="style1"><strong>Assignment Date :&nbsp; </strong></div></td>
+            <td height="29"><div align="right" class="style1"><strong>Last Date :&nbsp; </strong></div></td>
             <td><div align="left">
     <span id="sprytextfield2">
     <input type="text" name="txtDate" maxlength="10" size="15" />
@@ -138,14 +138,14 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td height="74"><div align="right" class="style1"><strong>Assignment Text :&nbsp; </strong></div></td>
+            <td height="74"><div align="right" class="style1"><strong>Text :&nbsp; </strong></div></td>
             <td><div align="left"><span id="sprytextarea1">
                <textarea name="assign_text" cols="35" rows="4" id="textfield3"></textarea>
             <span class="textareaRequiredMsg">*</span></span></div></td>
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td><div align="right" class="style1"><strong>Student Semester :&nbsp; </strong></div></td>
+            <td><div align="right" class="style1"><strong>Semester :&nbsp; </strong></div></td>
             <td><div align="left">
                 <label>
                 <select name="sem" style="width:200px;">

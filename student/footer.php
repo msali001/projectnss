@@ -4,7 +4,7 @@
         <td height="26"><div align="center"></div></td>
       </tr>
       <tr>
-        <td height="27"><div align="center">All Rights Reseved</div></td>
+        <td height="27"><div align="center">Computer Science Department</div></td>
       </tr>
       
 </table>

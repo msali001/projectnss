@@ -23,6 +23,22 @@
 			header("location: ./index.php?msg=Invalid Username or Password");
 		}
 	}
+	else if($category=="staff")
+	{
+		$result=mysqli_query($con,"select * from staff where staffloginid='$user'");
+		$row=mysqli_fetch_array($result);
+		if($row['staffpassword']==$pass)
+		{
+			$_SESSION['cuser']=$user;
+			$_SESSION['role']=$category;
+			login_log($con,$user);
+			header("location: ./staff/home.php");			
+		}
+		else
+		{
+			header("location: ./index.php?msg=Invalid Username or Password");
+		}
+	}
 	else
 	{
 		$result=mysqli_query($con,"select * from staff where staffloginid='$user'");
@@ -32,10 +48,7 @@
 			$_SESSION['cuser']=$user;
 			chk_admin($con,$user);
 			login_log($con,$user);
-			if($_SESSION['role'] == "admin") 
-			        header("location: ./admin/home.php");			
-		        else
-		                header("location: ./staff/home.php");
+			header("location: ./admin/home.php");			
 		}
 		else
 		{

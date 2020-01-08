@@ -25,9 +25,9 @@
 	}
 	function login_log($con,$user)
 	{
-		$date=date("d/m/Y");
-		$time=date("H:i:s");
-		mysqli_query($con,"insert into logtable (loginid,logindate,logintime) values('$user','$date','$time')");
+		//$date=date("d/m/Y");
+		//$time=date("H:i:s");
+		mysqli_query($con,"insert into logtable (loginid,logindate,logintime) values('$user',CURDATE(),CURRENT_TIME())");
 	}
 	function logout_log($con,$usr)
 	{
