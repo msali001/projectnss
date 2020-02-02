@@ -54,7 +54,7 @@
       <tr>
         <td height="50">&nbsp;</td>
         <td width="35" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" width="25" height="25" border="0"></a></div></td>
-        <td width="774" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Notification</strong></a></div></td>
+        <td width="774" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('notfform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Notification</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -103,7 +103,7 @@
       <tr>
         <td colspan="3">
           <p><a name="add"></a>                    </p>
-          <table width="902" border="0" cellspacing="0" cellpadding="0" style="margin:10px;">
+          <table width="902" border="0" cellspacing="0" cellpadding="0" style="margin:10px; display :none;" cellspacing="0" id="notfform">
             <tr>
               <td id="profile_top"></td>
             </tr>

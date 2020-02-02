@@ -1,8 +1,8 @@
 Deparment Sorting | Staff and admin
-Delete Confirmation
-Add Student reveal form
+Delete Confirmation : Done
+Add Student reveal form : Done
 Admin Home default
-Add Staf reveal
+Add Staf reveal : Done
 Faculty name remove from query
 Staff name in notification
 Phone number in Staf

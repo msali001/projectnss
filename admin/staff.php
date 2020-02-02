@@ -49,7 +49,7 @@
       <tr>
         <td>&nbsp;</td>
         <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
-        <td width="766" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Staff</strong></a></div></td>
+        <td width="766" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('staffform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Staff</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong>
@@ -63,7 +63,7 @@
         <td colspan="3"><div align="center">
         <?
 			include("./config.php");
-			echo"<table border=0 id=border width=90%><tr><td id=border align=center>Staff Name</td><td id=border align=center>Role</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
+			echo"<table  border=0 id=border width=90%><tr><td id=border align=center>Staff Name</td><td id=border align=center>Role</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
 			$result=mysqli_query($con,"select * from staff order by staffsurname");
 			while($row=mysqli_fetch_array($result))
 			{
@@ -82,7 +82,7 @@
         <a name="add">
 
   <form action="./staff_add_db.php" method="post" name="form1" id="form1"  >        
-    <table width="900" height="313" border="0" align="center" cellpadding="0" cellspacing="0">
+    <table width="900" height="313" border="0" align="center" cellpadding="0" style="display :none;" cellspacing="0" id="staffform">
       <tr>
         <td colspan="3" id="head_txt2">&nbsp;</td>
       </tr>

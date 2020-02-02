@@ -49,7 +49,7 @@
       <tr>
         <td>&nbsp;</td>
         <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
-        <td width="766" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Student</strong></a></div></td>
+        <td width="766" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('studform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Student</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -76,7 +76,7 @@
         <td colspan="3">
         <a name="add">
 	    <form id="form1" name="form1" method="post" action="./student_add_db.php" >        
-        <table width="900" height="316" border="0" align="center" cellpadding="0" cellspacing="0">
+        <table width="900" height="316" border="0" align="center" cellpadding="0" cellspacing="0" style="display :none;" id="studform">
           <tr>
             <td colspan="3" id="head_txt2">&nbsp;</td>
           </tr>

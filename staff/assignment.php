@@ -57,7 +57,7 @@
       <tr>
         <td height="51">&nbsp;</td>
         <td width="63" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
-        <td width="785" valign="middle"><div align="left"><a href="#add" style="text-decoration:none; color:#990000"><strong>Add Assignment</strong></a></div></td>
+        <td width="785" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('assform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Assignment</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -105,7 +105,7 @@
       <tr>
         <td colspan="3">
           <a name="add"></a>
-          <table width="902" border="0" cellspacing="0" cellpadding="0" style="margin:10px;">
+          <table width="902" border="0" cellspacing="0" cellpadding="0" style="margin:10px; display :none;" cellspacing="0" id="assform">
             <tr>
               <td id="profile_top"></td>
             </tr>
