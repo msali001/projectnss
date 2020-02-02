@@ -62,7 +62,7 @@
 			$result=mysqli_query($con,"select * from student order by studsurname");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center>".$row['studsurname']." ".$row['studfirstname']."</td><td align=center>".$row['studsemester']."</td><td align=center><a href=./student_detail.php?id=".$row['studid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./student_edit.php?id=".$row['studid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./student_del.php?id=".$row['studid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center>".$row['studsurname']." ".$row['studfirstname']."</td><td align=center>".$row['studsemester']."</td><td align=center><a href=./student_detail.php?id=".$row['studid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./student_edit.php?id=".$row['studid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a onclick=\"return confirm('Are you sure?')\" href=./student_del.php?id=".$row['studid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>

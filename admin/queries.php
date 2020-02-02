@@ -65,7 +65,7 @@
 			$result=mysqli_query($con,"select * from query order by querydate desc");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center>".$row['querysubject']."</td><td align=center>".$row['querydate']."</td><td align=center><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a onclick=\"return confirm('Are you sure?')\" href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>

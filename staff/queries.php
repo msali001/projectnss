@@ -85,7 +85,7 @@
 					$result=mysqli_query($con,"select * from query order by querydate desc");
 					while($row=mysqli_fetch_array($result))
 					{
-						echo"<tr><td align=center width=25%>".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']."</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+						echo"<tr><td align=center width=25%>".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']."</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a onclick=\"return confirm('Are you sure?')\" href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>\n";
 					}
 			
 				?>

@@ -67,7 +67,7 @@
 			$result=mysqli_query($con,"select * from staff order by staffsurname");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center>".$row['staffsurname']." ".$row['stafffirstname']."</td><td align=center>".$row['staffrole']."</td><td align=center><a href=./staff_detail.php?id=".$row['staffid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./staff_edit.php?id=".$row['staffid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./staff_del.php?id=".$row['staffid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center>".$row['staffsurname']." ".$row['stafffirstname']."</td><td align=center>".$row['staffrole']."</td><td align=center><a href=./staff_detail.php?id=".$row['staffid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./staff_edit.php?id=".$row['staffid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a onclick=\"return confirm('Are you sure?')\" href=./staff_del.php?id=".$row['staffid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>

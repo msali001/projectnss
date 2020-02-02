@@ -61,7 +61,7 @@
 			$result=mysqli_query($con,"select * from blog order by blogdate desc");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center><a href=./blog_detail.php?id=".$row['blogid'].">".$row['blogsubject']."</a></td><td align=center>".$row['blogdate']."</td><td align=center>".get_blogreply($con,$row['blogid'])."</td><td align=center>".$row['blogvisit']."</td><td align=center><a href=./blog_detail.php?id=".$row['blogid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./blog_edit.php?id=".$row['blogid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a href=./blog_del.php?id=".$row['blogid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center><a href=./blog_detail.php?id=".$row['blogid'].">".$row['blogsubject']."</a></td><td align=center>".$row['blogdate']."</td><td align=center>".get_blogreply($con,$row['blogid'])."</td><td align=center>".$row['blogvisit']."</td><td align=center><a href=./blog_detail.php?id=".$row['blogid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./blog_edit.php?id=".$row['blogid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a onclick=\"return confirm('Are you sure?')\" href=./blog_del.php?id=".$row['blogid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
 			echo"</table>"
 		?>

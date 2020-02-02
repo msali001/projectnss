@@ -117,7 +117,7 @@
 			$i=1;
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center width=6%>$i</td><td align=left width=61%>&nbsp;&nbsp;<a href=./que_detail.php?id=".$row['queid'].">".$row['quetext']."</a></td><td align=center width=11%><a href=./que_detail.php?id=".$row['queid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./que_edit.php?id=".$row['queid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=12%><a href=./que_del.php?id=".$row['queid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center width=6%>$i</td><td align=left width=61%>&nbsp;&nbsp;<a href=./que_detail.php?id=".$row['queid'].">".$row['quetext']."</a></td><td align=center width=11%><a href=./que_detail.php?id=".$row['queid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./que_edit.php?id=".$row['queid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=12%><a onclick=\"return confirm('Are you sure?')\" href=./que_del.php?id=".$row['queid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 				$i++;
 			}
 		?>
