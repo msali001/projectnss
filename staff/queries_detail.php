@@ -3,7 +3,7 @@
 	include("./function.php");
 	chk_user();
 	$id=$_GET['id'];
-	$result=mysqli_query($con,"select * from query where queryid=$id");
+	$result=mysqli_query($con,"SELECT query.`querysubject`,query.`querydate`,query.`querytext`,staff.stafffirstname FROM query  LEFT JOIN staff ON query.staffid = staff.staffid WHERE query.queryid = $id");
 	$row=mysqli_fetch_array($result);
 ?>
 
@@ -57,32 +57,38 @@
               
               
               <tr>
-                <td colspan="3" id="head_txt">Query Detail</td>
+                <td colspan="3" id="head_txt">Notification Detail</td>
               </tr>
               <tr>
                 <td colspan="3" id="head_txt3"><hr color="#990000" size="1px" width="95%" /></td>
               </tr>
               <tr>
-                <td width="454"><div align="right" class="style1"><strong>Query Subject :&nbsp;</strong></div></td>
+                <td width="454"><div align="right" class="style1"><strong>Notification Subject :&nbsp;</strong></div></td>
                 <td width="251"><div align="left">
                     <?=$row['querysubject']; ?>
                 </div></td>
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style4">Query Date :&nbsp;</div></td>
+                <td><div align="right" class="style4">Notification Date :&nbsp;</div></td>
                 <td><div align="left">
                    <?=$row['querydate']; ?></div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style4">Query Text :&nbsp;</div></td>
+                <td><div align="right" class="style4">Notification Text :&nbsp;</div></td>
                 <td><div align="left">
                     <?=$row['querytext']; ?>
                 </div></td>
                 <td>&nbsp;</td>
               </tr>
-              
+              <tr>
+                <td><div align="right" class="style4">Faculty Name :&nbsp;</div></td>
+                <td><div align="left">
+                    <?=$row['stafffirstname']; ?>
+                </div></td>
+                <td>&nbsp;</td>
+              </tr>
               <tr>
                 <td height="37" colspan="3"><div align="center">
                     
