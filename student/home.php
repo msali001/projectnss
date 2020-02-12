@@ -47,7 +47,7 @@
               <tr>
                 <td width="100%" id="box_mid"><table width="98%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
-                       <td width="38%"><div align="center">New Queries</div></td>
+                       <td width="38%"><div align="center">New Notifications</div></td>
                     </tr>
                 </table></td>
                 </tr>
@@ -66,7 +66,7 @@
 			}
 			else
 			{
-						echo"<tr><td align=center width=25%>No Any Queries</td></tr>";
+						echo"<tr><td align=center width=25%>No  Notifications</td></tr>";
 			}	
 		?>
                 </table>
@@ -166,6 +166,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
-	
+<script>
+  document.getElementById('hom').style.color = "#FFCC00";
+</script>
 </body>
 </html>

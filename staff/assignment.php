@@ -84,7 +84,7 @@
              	<table border=0 width=96%>
                 <?
 			include("./config.php");
-			$result=mysqli_query($con,"select * from assignment order by assigndate desc");
+			$result=mysqli_query($con,"select * from assignment where fac_id = '".$_SESSION['staffid']."' order by assigndate desc");
 			while($row=mysqli_fetch_array($result))
 			{
 				echo"<tr><td align=center width=35%>".$row['assigntitle']."</td><td align=center width=11%>".$row['assigndate']."</td><td align=center width=16%>".$row['staffloginid']."</td><td align=center width=10%><a href=./assignment_detail.php?id=".$row['assignid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./assignment_edit.php?id=".$row['assignid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a onclick=\"return confirm('Are you sure?')\" href=./assignment_del.php?id=".$row['assignid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";

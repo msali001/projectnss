@@ -46,7 +46,7 @@
               <? 
                 if (isset($_GET['msg'])){?>
                 <tr>
-                  <td height="31" colspan="2"><div align="center"><?=$_GET['msg']; ?></div></td>
+                  <td height="31" colspan="2"><div align="center" style="color: darkslategray; font-weight: normal;"><?=$_GET['msg']; ?></div></td>
                 </tr>
                 <? } ?>
                 <tr>

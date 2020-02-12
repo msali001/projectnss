@@ -31,6 +31,7 @@
 		{
 			$_SESSION['cuser']=$user;
 			$_SESSION['role']=$category;
+			$_SESSION['staffid']=$user;
 			login_log($con,$user);
 			header("location: ./staff/home.php");			
 		}

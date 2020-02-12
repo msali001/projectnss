@@ -97,7 +97,8 @@
         <td><div align="left">
                 <span id="sprytextfield4">
                 <input name="loginid" type="text" id="textfield4" size="35" onsubmit="chk_login(this)" />
-                </span>*       </div></td>
+                </span></div></td>
+                <td><div align="left">*</div></td>
         <td><input name="valid" type="text" id="textfield" size="35"  style="border:solid 1px #FFFFFF;" readonly="readonly" /></td>
       </tr>
       <tr>
@@ -107,7 +108,8 @@
             <label>
             <input name="password" type="password" id="textfield5" size="35" onsubmit="chk_fld()" />
             </label>
-            </span>*</div></td>
+            </span></div></td>
+            <td><div align="left">*</div></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -117,7 +119,8 @@
             <label>
             <input name="surname" type="text" size="35" />
             </label>
-            </span>          *</div></td>
+            </span></div></td>
+            <td><div align="left">*</div></td>
         <td width="212">&nbsp;</td>
       </tr>
       <tr>
@@ -127,7 +130,8 @@
           <label>
           <input name="firstname" type="text" id="textfield2" size="35" />
           </label>
-          </span>        *</div></td>
+          </span></div></td>
+          <td><div align="left">*</div></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -251,5 +255,8 @@ var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
 		}
 	}
 ?>	
+<script>
+  document.getElementById('staf').style.color = "#FFCC00";
+</script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 	$row=mysqli_fetch_array($result);
 	if($row['studpassword']==$opass and $id!=$npass)
 	{
-	        md5($npass);
+	    $npass = md5($npass);
 		mysqli_query($con,"update student set studpassword='$npass' where studloginid='$id'");
 		header("location: ./profile.php?msg=Password Successfully Changed");		
 	}

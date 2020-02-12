@@ -267,4 +267,7 @@ function ValidateForm(){
     return true
  }
 </script>
+<script>
+  document.getElementById('queri').style.color = "#FFCC00";
+</script>
 </html>

@@ -25,7 +25,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -49,6 +49,11 @@
       </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
+        <td width="766" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('blogform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Blog</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -76,7 +81,7 @@
         <a name="add">
 	    <form name="form1" method="post" action="./blog_add_db.php" >
         <input type="hidden" name="login" value="<?=$_SESSION['cuser']; ?>">      
-        <table width="900" height="312" border="0" align="center" cellpadding="0" cellspacing="0">
+        <table id="blogform" width="900" height="312" border="0" align="center" cellpadding="0" cellspacing="0" style="display :none;">
           <tr>
             <td colspan="3" id="head_txt2">&nbsp;</td>
           </tr>
@@ -145,6 +150,9 @@
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
 //-->
+</script>
+<script>
+  document.getElementById('blg').style.color = "#FFCC00";
 </script>
 </body>
 </html>

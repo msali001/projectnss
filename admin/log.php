@@ -47,7 +47,7 @@
       <tr>
         <td>&nbsp;</td>
         <td width="23" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/del_item.png" alt="Add" width="16" height="16" border="0"></a></div></td>
-        <td width="786" valign="middle"><div align="left"><a href="./log_del.php" style="text-decoration:none; color:#990000"><strong>Clear Log</strong></a></div></td>
+        <td width="786" valign="middle"><div align="left"><a href="./log_del.php"  onclick="return confirm('Are you sure?')"sstyle="text-decoration:none; color:#990000"><strong>Clear Log</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
@@ -89,4 +89,7 @@
 </table>
 	
 </body>
+<script>
+  document.getElementById('lg').style.color = "#FFCC00";
+</script>
 </html>

@@ -8,5 +8,5 @@
 	$dt=date("d/m/Y");
 	mysqli_query($con,"insert into blog (blogsubject,blogdate,blogtext,loginid,blogvisit) values('$subject','$dt','$text','$login',0)");
 
-	header("location: ./blog.php?msg=Query Added");
+	header("location: ./blog.php?msg=Blog Added");
 ?>

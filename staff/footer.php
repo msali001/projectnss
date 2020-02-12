@@ -2,7 +2,7 @@
       
       
       <tr>
-        <td height="27"><div align="center">All Rights Reseved</div></td>
+        <td height="27"><div align="center"></div></td>
       </tr>
       
 </table>

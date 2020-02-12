@@ -51,13 +51,13 @@
               </tr>
               
               <tr>
-                <td colspan="3" id="head_txt">Edit Query</td>
+                <td colspan="3" id="head_txt">Edit Notification</td>
               </tr>
               <tr>
                 <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
               </tr>
               <tr>
-                <td width="396"><div align="right" class="style1">Query Subject : </div></td>
+                <td width="396"><div align="right" class="style1">Notification Subject : </div></td>
                 <td width="309"><div align="left">
                     <label>
                     <input name="subject" type="text" size="35" value="<?=$row['querysubject']; ?>" />
@@ -66,14 +66,14 @@
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style1">Query Date : </div></td>
+                <td><div align="right" class="style1">Notification Date : </div></td>
                 <td><div align="left">
                     <input type="text" name="txtDate" maxlength="10" size="15" value="<?=$row['querydate']; ?>" />
                   (dd/mm/yyyy)</div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style1">Query Text : </div></td>
+                <td><div align="right" class="style1">Notification Text : </div></td>
                 <td><div align="left">
                     <label>
                     <textarea name="query_text" cols="35" rows="4" id="textfield3"><?=$row['querytext']; ?></textarea>

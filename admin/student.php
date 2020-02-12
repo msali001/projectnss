@@ -232,5 +232,8 @@ var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
 		}
 	}
 ?>
+<script>
+  document.getElementById('std').style.color = "#FFCC00";
+</script>
 </body>
 </html>
