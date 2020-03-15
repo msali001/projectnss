@@ -29,6 +29,8 @@
 		if($row['staffpassword']==$pass)
 		{
 			$_SESSION['cuser']=$user;
+			$_SESSION['stfid']=$row['staffid'];
+			echo $_SESSION['stfid'];
 			chk_admin($con,$user);
 			login_log($con,$user);
 			header("location: ./home.php");			

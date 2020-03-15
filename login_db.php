@@ -31,8 +31,9 @@
 		{
 			$_SESSION['cuser']=$user;
 			$_SESSION['role']=$category;
-			$_SESSION['staffid']=$user;
+			$_SESSION['staffid']=$row['staffid'];
 			login_log($con,$user);
+			echo $_SESSION['staffid'];
 			header("location: ./staff/home.php");			
 		}
 		else
