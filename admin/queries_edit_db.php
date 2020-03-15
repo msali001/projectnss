@@ -10,5 +10,5 @@
 	$dt=$_POST['txtDate'];
 	mysqli_query($con,"update query set querysubject='$subject', querydate='$dt', querytext='$text', staffid='$faculty' where queryid='$id'");
 
-	header("location: ./queries.php?msg=Query Edited");
+	header("location: ./queries.php?msg=Notification Edited");
 ?>

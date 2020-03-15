@@ -7,6 +7,7 @@
 	$designation=$_POST['desig'];
 	$login=$_POST['loginid'];
 	$pass=$_POST['password'];
+	$pass=md5($pass);
 	$role=$_POST['role'];
 	mysqli_query($con,"update staff set staffsurname='$sname', stafffirstname='$fname', stafflastname='$lname', staffdesignation='$designation', staffloginid='$login', staffpassword='$pass', staffrole='$role' where staffid=$id"); 
 	

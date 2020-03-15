@@ -95,38 +95,26 @@
                       <input name="email" type="text" value="<?=$row['staffemail']; ?>" size="35" />
                       <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid Email.</span></span></div></td>
                     </tr>
+                    </tr>
                     <tr>
                       <td>&nbsp;</td>
-                      <td><div align="left"><strong>Hobbies :</strong></div></td>
-                      <td colspan="2"><div align="left">
-                        <textarea name="hobbies" cols="35" rows="3">  <?=$row['staffhobby']; ?>
-                        </textarea>
-                      </div></td>
+                      <td><div align="left"><strong>Phone NUMBER :</strong></div></td>
+                      <td colspan="2"><div align="left"><span id="sprytextfield5">
+                        <input name="phoneno" type="text" value="<?=$row['staffphoneno']; ?>" size="35" />
+                        <span class="textfieldRequiredMsg">A value is required.</span></span></div></td>
                     </tr>
+                    
+                    
                     <tr>
                       <td>&nbsp;</td>
                       <td><div align="left"><strong>Qualification :</strong></div></td>
                       <td colspan="2"><div align="left"><span id="sprytextarea1">
-                        <textarea name="qualification" cols="35" rows="3">  <?=$row['staffqualification']; ?>
+                        <textarea name="qualification" cols="35" rows="3" ><?=$row['staffqualification']; ?> 
                         </textarea>
-                        <span class="textareaRequiredMsg">A value is required.</span></span></div>                        </td>
+                        <span class="textareaRequiredMsg">A value is required.</span></span></div>  </td>
                     </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td><div align="left"><strong>Certification :</strong></div></td>
-                      <td colspan="2"><div align="left"><span id="sprytextarea2">
-                        <textarea name="certification" id="textarea" cols="35" rows="3"><?=$row['staffcertification']; ?>
-                        </textarea>
-                                <span class="textareaRequiredMsg">A value is required.</span></span></div></td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td><div align="left"><strong>Experience :</strong></div></td>
-                      <td colspan="2"><div align="left"><span id="sprytextarea3">
-                        <textarea name="experience" id="textarea2" cols="35" rows="3"><?=$row['staffexperience']; ?>
-                        </textarea>
-                        <span class="textareaRequiredMsg">A value is required.</span></span></div></td>
-                    </tr>
+                   
+                    
                     <tr>
                       <td>&nbsp;</td>
                       <td><strong>Profile Picture :</strong></td>

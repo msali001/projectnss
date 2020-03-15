@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>College Portal</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="main">
@@ -43,20 +45,21 @@
               </tr>
             <tr>
               <td width="440"><div align="right"><strong>Old Password :&nbsp;</strong></div></td>
-              <td width="460"><div align="left">
-                    <input type="password" name="opass" id="textfield" />
-               </div></td>
+              <td width="460"><div align="left"><span id="sprytextfield1">
+                <input type="password" name="opass" id="textfield" />
+                <span class="textfieldRequiredMsg">A value is required.</span></span></div></td>
             </tr>
             <tr>
               <td><div align="right"><strong>New Password :&nbsp;</strong></div></td>
-              <td><div align="left">
-                <input type="password" name="npass" id="textfield2" onsubmit="chk_fld();" />
-              </div></td>
+              <td><div align="left"><span id="sprytextfield2">
+                <input type="password" name="npass" id="textfield2" onsubmit="chk_fld()" />
+                <span class="textfieldRequiredMsg">A value is required.</span></span></div></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><label>
                 <input type="submit" name="button" id="but_sub" value="CHANGE" />
+                 <input type="button" name="button2" id="but_sub" value="Cancel" onclick="location.href='./profile.php'" />
               </label></td>
             </tr>
           </table>
@@ -77,7 +80,6 @@
   </tr>
 </table>
 	
-</body>
 <script type="text/javascript">
 function chk_fld()
 {
@@ -87,5 +89,10 @@ function chk_fld()
 		form1.npass.focus();
 	}
 }
+<!--
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+//-->
 </script>
+</body>
 </html>

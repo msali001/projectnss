@@ -21,7 +21,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -46,6 +46,7 @@
       <tr>
         <td colspan="3">&nbsp;</td>
       </tr>
+      
       <tr>
         <td>&nbsp;</td>
         <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
@@ -136,6 +137,7 @@
             </div></td>
             <td>&nbsp;</td>
           </tr>
+        
           <tr>
             <td><div align="right" class="style1">Student Semester : </div></td>
             <td><div align="left">
@@ -154,7 +156,7 @@
           </tr>
           <tr>
             <td height="37">&nbsp;</td>
-            <td height="37">* Fields Are Required</td>
+            <td height="37">* FIELDS ARE REQUIRED</td>
             <td height="37">&nbsp;</td>
           </tr>
           <tr>

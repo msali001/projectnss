@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>College Portal</title>
+<title>Department Portal</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
@@ -91,7 +91,7 @@
               <tr>
                 <td height="40">&nbsp;</td>
                 <td><div align="left">
-                  <input type="button" name="button2" id="but_sub" value="BACK" onclick="location.href='./blog.php?msg=Blog Edited'" />
+                  <input type="button" name="button2" id="but_sub" value="BACK" onclick="location.href='./blog.php?msg=Blog Visited'" />
                 </div></td>
                 <td colspan="2">&nbsp;</td>
               </tr>

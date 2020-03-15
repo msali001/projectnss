@@ -138,8 +138,8 @@
                 <td height=21 colspan=3><div align="center"><span class="style2"><strong>Reply Blog</strong></span></div></td>
               </tr>
               <form id="form1" name="form1" method="post" action="./blog_reply_db.php">
-              <input type="hidden" name="id" value=".$_GET['id'].">
-              <input type="hidden" name="login" value=".$_SESSION['cuser'].">
+              <input type="hidden" name="id" value="<?=$_GET['id']; ?>">
+              <input type="hidden" name="login" value="<?=$_SESSION['cuser']; ?>">
               <tr>
                 <td height=21 colspan=3><div align="center"><span id="sprytextarea1">
                   <textarea name="reply" cols="45" rows="5"></textarea>

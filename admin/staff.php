@@ -21,7 +21,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -175,14 +175,14 @@
       <tr>
         <td height="27">&nbsp;</td>
         <td><blockquote>
-          <p>* Fields Are Required</p>
+          <p>* FIELDS ARE REQUIRED</p>
         </blockquote></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td colspan="3"><div align="center">
           <label>
-          <input type="submit" name="button" id="but_sub" value="Add" onclick="return chk_frm(this)" />
+          <input type="submit" name="button" id="but_sub" value="Submit" />
           </label>
           <label>
           <input type="reset" name="button2" id="but_sub" value="Reset" />

@@ -6,10 +6,8 @@
 	$lname=$_POST['lname'];
 	$email=$_POST['email'];
 	$img=$_POST['img'];
-	$hobby=$_POST['hobbies'];
 	$qualification=$_POST['qualification'];
-	$certification=$_POST['certification'];
-	$experience=$_POST['experience'];
+	$Sphno=$_POST['SPhoneno'];
  	//Image Upload
 	$uploaddir = '../img/';
 	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
@@ -23,7 +21,7 @@
 	{
 		$img="default.gif";
 	}
-	mysqli_query($con,"update staff set staffsurname='$sname', stafffirstname='$fname', stafflastname='$lname', staffemail='$email', staffqualification='$qualification', staffcertification='$certification', staffexperience='$experience', staffimg='$fpath', staffhobby='$hobby' where staffid=$id"); 
+	mysqli_query($con,"update staff set staffsurname='$sname', stafffirstname='$fname', stafflastname='$lname', staffemail='$email', staffqualification='$qualification', staffphoneno='$Sphno', staffimg='$fpath' where staffid=$id"); 
 	
 	header("location: ./profile.php?msg=Profile Successfully Edited");
 ?>

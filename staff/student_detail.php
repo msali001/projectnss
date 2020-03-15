@@ -24,7 +24,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -51,14 +51,14 @@
         </tr>
       
       <tr>
-        <td width="459"><div align="right" class="style1">Student Surname : </div></td>
+        <td width="459"><div align="right" class="style1">Surname : </div></td>
         <td width="201"><div align="left">
             <?=$row['studsurname']; ?>
           </div></td>
         <td width="240">&nbsp;</td>
       </tr>
       <tr>
-        <td><div align="right" class="style1">Student Firstname : </div></td>
+        <td><div align="right" class="style1">Firstname : </div></td>
         <td><div align="left">
           <?=$row['studfirstname']; ?>
         </div></td>
@@ -72,14 +72,14 @@
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td><div align="right" class="style1">Student Semester : </div></td>
+        <td><div align="right" class="style1">Semester : </div></td>
         <td><div align="left">
 			<?=$row['studsemester']; ?>
         </div></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td height="22"><div align="right" class="style1">Student Loginid : </div></td>
+        <td height="22"><div align="right" class="style1">Loginid : </div></td>
         <td>
           <div align="left">
 			<?=$row['studloginid']; $user=$row['studloginid']; ?>

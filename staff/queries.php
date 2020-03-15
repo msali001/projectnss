@@ -27,7 +27,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -85,7 +85,7 @@
 					$result=mysqli_query($con,"select * from query order by querydate desc");
 					while($row=mysqli_fetch_array($result))
 					{
-						echo"<tr><td align=center width=25%>".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']."</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a onclick=\"return confirm('Are you sure?')\" href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>\n";
+						echo"<tr><td align=center width=25%>".substr($row['querysubject'],0,22)."...</a></td><td align=center width=10%>".$row['querydate']. "</td><td align=center width=10%><a href=./queries_detail.php?id=".$row['queryid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=10%><a href=./queries_edit.php?id=".$row['queryid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a onclick=\"return confirm('Are you sure?')\" href=./queries_del.php?id=".$row['queryid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>\n";
 					}
 			
 				?>
@@ -144,23 +144,7 @@
               <span class="textareaRequiredMsg">A value is required.</span></span></div></td>
             <td>&nbsp;</td>
           </tr>
-          <tr>
-            <td height="28"><div align="right" class="style1">Faculty  : </div></td>
-            <td><div align="left">
-                <label>
-                <select name="faculty" style="width:200px;">
-                <?
-						$result=mysqli_query($con,"select * from staff order by staffsurname");
-                        while($row=mysqli_fetch_array($result))
-                        {
-                  			echo "<option value=\"".$row['staffid']."\">".$row['staffsurname']." ".$row['stafffirstname']."</option>";
-                        }
-				?>
-                </select>
-                </label>
-            </div></td>
-            <td>&nbsp;</td>
-          </tr>
+         
           <tr>
             <td height="37" colspan="3"><div align="center">
                 <label>

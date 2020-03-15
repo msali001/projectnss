@@ -92,24 +92,18 @@
                         <td><div align="left">
                             <label>
                             <select name="semester" style="width:200px;">
-                              <option value="MCA-1" selected="selected">MCA-1</option>
-                              <option value="MCA-2">MCA-2</option>
-                              <option value="MCA-3">MCA-3</option>
-                              <option value="MCA-4">MCA-4</option>
-                              <option value="MCA-5">MCA-5</option>
-                              <option value="MCA-6">MCA-6</option>
-                              <option value="FYBCOM">FYBCOM</option>
-                              <option value="SYBCOM">SYBCOM</option>
-                              <option value="TYBCOM">TYBCOM</option>
-                              <option value="FYBBA">FYBBA</option>
-                              <option value="SYBBA">SYBBA</option>
-                              <option value="TYBBA">TYBBA</option>
+                         <option value="CS-1" selected="selected">CS-1</option>
+                  <option value="CS-2">CS-2</option>
+                  <option value="CS-3">CS-3</option>
+                  <option value="CS-4">CS-4</option>
+                  <option value="CS-5">CS-5</option>
+                  <option value="CS-6">CS-6</option>
                             </select>
                             </label>
                         </div></td>
                         <td>&nbsp;</td>
                       </tr>
-                      
+                  
                       <tr>
                         <td colspan="3"><div align="center">
                             <label>

@@ -30,7 +30,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -94,7 +94,8 @@
                           &nbsp;<?=$row['studsemester']; ?>
                       </div></td>
                       <td colspan="2"><div align="left"></div>                        </td>
-                    </tr>
+                    </tr> 
+                  
                     <tr>
                       <td height="25"><div align="right" class="style3">Student Loginid : </div></td>
                       <td><div align="left">

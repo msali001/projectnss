@@ -22,7 +22,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -42,12 +42,12 @@
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td width="50%"><div align="center">
+          <td width="25%"><div align="center">
             <table width="25%" border="0" cellspacing="0" cellpadding="0" >
               <tr>
                 <td width="100%" id="box_mid"><table width="98%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
-                       <td width="38%"><div align="center">New Queries</div></td>
+                       <td width="38%"><div align="center">New Notifications</div></td>
                     </tr>
                 </table></td>
                 </tr>
@@ -56,26 +56,25 @@
                     <table border="0" width="283px" align="center" style="margin:5px;">
                       <?
 			include("./config.php");
-			$result=mysqli_query($con,"select * from query where staffid='".get_staffname($con,$_SESSION['cuser'])."' and querystatus='Unanswered' order by querydate desc limit 0,5");
+			$result=mysqli_query($con,"select * from query order by querydate");
 			if(mysqli_num_rows($result)>0)
 			{
 				while($row=mysqli_fetch_array($result))
 				{
-					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td></tr>";
+						echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td></tr>";
 				}
 			}
 			else
 			{
-				echo"<tr><td align=center width=25%>No Any Query</td></tr>";
-			}
+						echo"<tr><td align=center width=25%>No  Notifications</td></tr>";
+			}	
 		?>
-              	<tr><td align="center"><strong><a href="./queries.php">More..</a></strong></td></tr>
                 </table>
                 </div></td>
               </tr>
             </table>
           </div></td>
-          <td width="50%"><div align="center">
+          <td width="25%"><div align="center">
             <table width="25%" border="0" cellspacing="0" cellpadding="0" >
               <tr>
                 <td width="100%" id="box_mid"><table width="98%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -90,17 +89,11 @@
                       <?
 			include("./config.php");
 			$result=mysqli_query($con,"select * from blog order by blogid desc limit 0,5");
-			if(mysqli_num_rows($result)>0)
+			while($row=mysqli_fetch_array($result))
 			{
-				while($row=mysqli_fetch_array($result))
-				{
-					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
-				}
+				echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
 			}
-			else
-			{
-					echo"<tr><td align=center width=25%>No New Blog</td></tr>";
-			}
+			
 		?>
         	<tr><td align="center"><strong><a href="./blog.php">More..</a></strong></td></tr>
                     </table>
@@ -108,7 +101,40 @@
               </tr>
             </table>
           </div></td>
-          
+          <td width="25%"><div align="center">
+            <table width="25%" border="0" cellspacing="0" cellpadding="0" >
+              <tr>
+                <td width="100%" id="box_mid"><table width="98%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="38%"><div align="center">Latest Assignments</div></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td id="box_border" width="283px" valign="top" align="center"><div align="center">
+                    <table border="0" width="283px" align="center" style="margin:5px;">
+                      <?
+			include("./config.php");
+			$result=mysqli_query($con,"select * from assignment order by assigndate desc  limit 0,5");
+			if(mysqli_num_rows($result)>0)
+			{
+				while($row=mysqli_fetch_array($result))
+				{
+					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./assignment_detail.php?id=".$row['assignid'].">".substr($row['assigntitle'],0,22)."...</a></td></tr>";
+				}
+			}
+			else
+			{
+					echo"<tr><td align=center width=25%>No Any Assignments</td></tr>";
+			}
+			
+		?>
+                  	<tr><td align="center"><strong><a href="./assignment.php">More..</a></strong></td></tr>
+                    </table>
+                </div></td>
+              </tr>
+            </table>
+          </div></td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -119,11 +145,11 @@
           <td colspan="3"><div align="center">
             <table width="60%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td><div align="center"><a href="./profile.php"><img src="images/profile_icon.jpg" alt="Profile" width="32" height="32" border="0" /></a></div></td>
-                <td><div align="center"><a href="./student.php"><img src="images/person2_f2.png" alt="Student" width="32" height="32" border="0" /></a></div></td>
+               
+                <td><div align="center"><a href="./staff.php"><img src="images/person2_f2.png" alt="Student" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./queries.php"><img src="images/query.png" alt="Queries" width="32" height="33" border="0" /></a></div></td>
                 <td><div align="center"><a href="./log.php"><img src="images/history_f2.png" alt="Log" width="32" height="32" border="0" /></a></div></td>
-                <td><div align="center"><a href="./exam.php"><img src="images/copy_f2.png" alt="Exam" width="32" height="32" border="0" /></a></div></td>
+              
                 <td><div align="center"><a href="./blog.php"><img src="images/css_f2.png" alt="Blog" width="32" height="32" border="0" /></a></div></td>
               </tr>
             </table>

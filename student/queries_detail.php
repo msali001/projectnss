@@ -29,7 +29,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -57,26 +57,26 @@
               
               
               <tr>
-                <td colspan="3" id="head_txt">Query Detail</td>
+                <td colspan="3" id="head_txt">Notification Detail</td>
               </tr>
               <tr>
                 <td colspan="3" id="head_txt3"><hr color="#990000" size="1px" width="95%" /></td>
               </tr>
               <tr>
-                <td width="454"><div align="right" class="style1"><strong>Query Subject :&nbsp;</strong></div></td>
+                <td width="454"><div align="right" class="style1"><strong>Subject :&nbsp;</strong></div></td>
                 <td width="251"><div align="left">
                     <?=$row['querysubject']; ?>
                 </div></td>
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style4">Query Date :&nbsp;</div></td>
+                <td><div align="right" class="style4">Date :&nbsp;</div></td>
                 <td><div align="left">
                    <?=$row['querydate']; ?></div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style4">Query Text :&nbsp;</div></td>
+                <td><div align="right" class="style4">Text :&nbsp;</div></td>
                 <td><div align="left">
                     <?=$row['querytext']; ?>
                 </div></td>

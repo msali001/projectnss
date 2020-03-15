@@ -25,7 +25,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -60,20 +60,20 @@
                 <td colspan="3" id="head_txt3"><hr color="#990000" size="1px" width="95%" /></td>
               </tr>
               <tr>
-                <td width="466"><div align="right" class="style1"><strong>Assignment Title :&nbsp;</strong></div></td>
+                <td width="466"><div align="right" class="style1"><strong>Title :&nbsp;</strong></div></td>
                 <td width="239"><div align="left">
                     <?=$row['assigntitle']; ?>
                 </div></td>
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style2">Assignment Date :&nbsp;</div></td>
+                <td><div align="right" class="style2">Date :&nbsp;</div></td>
                 <td><div align="left">
 <?=$row['assigndate']; ?></div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style2">Assignment Text :&nbsp;</div></td>
+                <td><div align="right" class="style2">Text :&nbsp;</div></td>
                 <td><div align="left">
                     <?=$row['assigntext']; ?>
                 </div></td>

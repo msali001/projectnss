@@ -22,7 +22,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -56,20 +56,19 @@
                     <table border="0" width="283px" align="center" style="margin:5px;">
                       <?
 			include("./config.php");
-			$result=mysqli_query($con,"select * from query where staffid='".get_staffname($con,$_SESSION['cuser'])."' and querystatus='Unanswered' order by querydate desc limit 0,5");
+			$result=mysqli_query($con,"select * from query order by querydate");
 			if(mysqli_num_rows($result)>0)
 			{
 				while($row=mysqli_fetch_array($result))
 				{
-					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td></tr>";
+						echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td></tr>";
 				}
 			}
 			else
 			{
-				echo"<tr><td align=center width=25%>No Notifications</td></tr>";
-			}
+						echo"<tr><td align=center width=25%>No  Notifications</td></tr>";
+			}	
 		?>
-              	<tr><td align="center"><strong><a href="./queries.php">More..</a></strong></td></tr>
                 </table>
                 </div></td>
               </tr>
@@ -90,17 +89,11 @@
                       <?
 			include("./config.php");
 			$result=mysqli_query($con,"select * from blog order by blogid desc limit 0,5");
-			if(mysqli_num_rows($result)>0)
+			while($row=mysqli_fetch_array($result))
 			{
-				while($row=mysqli_fetch_array($result))
-				{
-					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
-				}
+				echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
 			}
-			else
-			{
-					echo"<tr><td align=center width=25%>No New Blog</td></tr>";
-			}
+			
 		?>
         	<tr><td align="center"><strong><a href="./blog.php">More..</a></strong></td></tr>
                     </table>
@@ -122,18 +115,19 @@
                     <table border="0" width="283px" align="center" style="margin:5px;">
                       <?
 			include("./config.php");
-			$result=mysqli_query($con,"select * from assignment where staffloginid='".$_SESSION['cuser']."' order by assigndate desc  limit 0,5");
+			$result=mysqli_query($con,"select * from assignment where studsemester='".$_SESSION['sem']."' order by assigndate desc  limit 0,5");
 			if(mysqli_num_rows($result)>0)
 			{
 				while($row=mysqli_fetch_array($result))
 				{
-					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./assignment_detail.php?id=".$row['assignid']	.">".substr($row['assigntitle'],0,22)."...</a></td></tr>";
+					echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./assignment_detail.php?id=".$row['assignid'].">".substr($row['assigntitle'],0,22)."...</a></td></tr>";
 				}
 			}
 			else
 			{
-					echo"<tr><td align=center width=25%>No New Assignments</td></tr>";
-			}		
+					echo"<tr><td align=center width=25%>No Any Assignments</td></tr>";
+			}
+			
 		?>
                   	<tr><td align="center"><strong><a href="./assignment.php">More..</a></strong></td></tr>
                     </table>
@@ -152,7 +146,6 @@
             <table width="60%" border="0" cellspacing="0" cellpadding="0">
               <tr>
                 <td><div align="center"><a href="./profile.php"><img src="images/profile_icon.jpg" alt="Profile" width="32" height="32" border="0" /></a></div></td>
-                <td><div align="center"><a href="./student.php"><img src="images/person2_f2.png" alt="Student" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./queries.php"><img src="images/query.png" alt="Queries" width="32" height="33" border="0" /></a></div></td>
                 <td><div align="center"><a href="./log.php"><img src="images/history_f2.png" alt="Log" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./exam.php"><img src="images/copy_f2.png" alt="Exam" width="32" height="32" border="0" /></a></div></td>
@@ -172,6 +165,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
-	
+<script>
+  document.getElementById('hom').style.color = "#FFCC00";
+</script>
 </body>
 </html>
