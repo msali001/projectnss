@@ -51,7 +51,7 @@
                 </tr>
               <tr>
                 <td width="4%" height="61">&nbsp;</td>
-                <td width="14%"><img src="../img/<?=$row['staffimg']; ?>" alt="Profile" width="128" height="128" style="border:double 2px #CC0000;" /></td>
+                
                 <td colspan="2"><div align="left"><span class="style1">&nbsp;
                   <?=$row['staffsurname']." ".$row['stafffirstname']; ?>'s Profile</span></div></td>
               </tr>
