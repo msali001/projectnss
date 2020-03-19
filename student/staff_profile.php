@@ -26,7 +26,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -78,32 +78,15 @@
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
                     </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td height="25"><div align="left"><strong>Hobbies :</strong></div></td>
-                      <td colspan="3"><div align="left"><?=$row['staffhobby']; ?></div></td>
-                    </tr>
-                    <tr>
+                   
                       <td>&nbsp;</td>
                       <td height="25"><div align="left"><strong>Qualification :</strong></div></td>
                       <td colspan="3"><div align="left">
                         <?=$row['staffqualification']; ?>
                       </div>                        </td>
                     </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td height="25"><div align="left"><strong>Certification :</strong></div></td>
-                      <td colspan="3"><div align="left">
-                        <?=$row['staffcertification']; ?>
-                      </div>                        </td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td height="25"><div align="left"><strong>Experience :</strong></div></td>
-                      <td colspan="3"><div align="left">
-                        <?=$row['staffexperience']; ?>
-                      </div>                        </td>
-                    </tr>
+                   
+                   
                   </table>
                 </div></td>
               </tr>
@@ -130,6 +113,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
-	
+<script>
+  document.getElementById('sta').style.color = "#FFCC00";
+</script>	
 </body>
 </html>

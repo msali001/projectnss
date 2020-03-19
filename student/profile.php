@@ -131,6 +131,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
-	
+<script>
+  document.getElementById('pro').style.color = "#FFCC00";
+</script>	
 </body>
 </html>

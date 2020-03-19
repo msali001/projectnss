@@ -3,7 +3,7 @@
 	include("./function.php");
 	chk_user();
 	$id=$_GET['id'];
-	$result=mysqli_query($con,"select * from query where queryid=$id");
+	$result=mysqli_query($con,"SELECT query.`querysubject`,query.`querydate`,query.`querytext`,staff.stafffirstname FROM query  LEFT JOIN staff ON query.staffid = staff.staffid WHERE query.queryid = $id");
 	$row=mysqli_fetch_array($result);
 ?>
 
@@ -32,7 +32,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -62,26 +62,44 @@
                 <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
               </tr>
               <tr>
+<<<<<<< HEAD
+                <td width="454"><div align="right" class="style1">Notification Subject : </div></td>
+=======
                 <td width="454"><div align="right" class="style1"> Subject : </div></td>
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
                 <td width="251"><div align="left">
                     <?=$row['querysubject']; ?>
                 </div></td>
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
+<<<<<<< HEAD
+                <td><div align="right" class="style1">Notification Date : </div></td>
+=======
                 <td><div align="right" class="style1"> Date : </div></td>
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
                 <td><div align="left">
                    <?=$row['querydate']; ?></div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
+<<<<<<< HEAD
+                <td><div align="right" class="style1">Notification Text : </div></td>
+=======
                 <td><div align="right" class="style1"> Text : </div></td>
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
                 <td><div align="left">
                     <?=$row['querytext']; ?>
                 </div></td>
                 <td>&nbsp;</td>
               </tr>
-              
+               <tr>
+                <td><div align="right" class="style4">Faculty Name :&nbsp;</div></td>
+                <td><div align="left">
+                    <?=$row['stafffirstname']; ?>
+                </div></td>
+                <td>&nbsp;</td>
+              </tr>
               
               <tr>
                 <td height="37" colspan="3"><div align="center">
@@ -208,5 +226,7 @@ function ValidateForm(){
     return true
  }
 </script>
-
+<script>
+  document.getElementById('queri').style.color = "#FFCC00";
+</script>
 </html>

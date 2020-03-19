@@ -43,93 +43,74 @@
       <tr>
         <td colspan="3">&nbsp;</td>
       </tr>
-      <tr>
-        <td id="head_txt"><div align="center"></div></td>
-        <td width="38" id="head_txt"><div align="left"><img src="images/css_f2.png" alt="blog" width="32" height="32" /></div></td>
-        <td width="844" id="head_txt"><div align="left" class="style3">Blog</div></td>
+        <tr>
+        <td colspan="3" id="head_txt"><div align="center">Blog</div></td>
       </tr>
       <tr>
-        <td colspan="3"><hr color="#990000" width="95%" size="1px"></td>
+        <td colspan="3"><hr color="#CCCCCC" size="1px"></td>
       </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
+      </tr>
+     <tr>
+        <td>&nbsp;</td>
+        <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/css_f2.png" alt="Add" border="0"></a></div></td>
+        <td width="766" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('blogform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Blog</strong></a></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center" style="margin:5px;"><strong><?=$_GET['msg']; ?></strong></div></td>
       </tr>
       <tr>
         <td colspan="3"><div align="center">
-          <table width="95%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td id="box_left">&nbsp;</td>
-              <td width="96%" id="box_mid">
-              <table width="100%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td width="26%" style="border-right:solid 1px #CC0000;"><div align="center">Blog Post</div></td>
-                    <td width="17%" style="border-right:solid 1px #CC0000;"><div align="center">Posted Date</div></td>
-                    <td width="12%" style="border-right:solid 1px #CC0000;"><div align="center">Reply</div></td>
-                    <td width="11%" style="border-right:solid 1px #CC0000;"><div align="center">Visits</div></td>
-                    <td width="12%" style="border-right:solid 1px #CC0000;"><div align="center">Detail</div></td>
-                    <td width="10%" style="border-right:solid 1px #CC0000;"><div align="center">Edit</div></td>
-                    <td width="12%"><div align="center">Delete</div></td>
-                  </tr>
-              </table></td>
-              <td id="box_right">&nbsp;</td>
-            </tr>
-            <tr>
-              <td colspan="3" width="854px" id="box_border" valign="top" align="center"><div align="center">
-             <table width="95%" border="0" align="center">
-             <?
+        
+        <?
 			include("./config.php");
+			echo"<table border=0 id=border width=95%><tr><td id=border align=center>Blog Post</td><td id=border align=center>Posted Date</td><td id=border align=center>Reply</td><td id=border align=center>Visits</td><td id=border align=center>Detail</td><td id=border align=center>Edit</td><td id=border align=center>Delete</td></tr>";
 			$result=mysqli_query($con,"select * from blog order by blogdate desc");
 			while($row=mysqli_fetch_array($result))
 			{
-				echo"<tr><td align=center width=25%><a href=./blog_detail.php?id=".$row['blogid'].">".$row['blogsubject']."</a></td><td align=center width=18%>".$row['blogdate']."</td><td align=center width=12%>".get_blogreply($con,$row['blogid'])."</td><td align=center width=11%>".$row['blogvisit']."</td><td align=center width=13%><a href=./blog_detail.php?id=".$row['blogid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center width=11%><a href=./blog_edit.php?id=".$row['blogid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center width=10%><a onclick=\"return confirm('Are you sure?')\" href=./blog_del.php?id=".$row['blogid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
+				echo"<tr><td align=center><a href=./blog_detail.php?id=".$row['blogid'].">".$row['blogsubject']."</a></td><td align=center>".$row['blogdate']."</td><td align=center>".get_blogreply($con,$row['blogid'])."</td><td align=center>".$row['blogvisit']."</td><td align=center><a href=./blog_detail.php?id=".$row['blogid']."><img src=./images/detail_item.png alt=Detail border=0></a></td><td align=center><a href=./blog_edit.php?id=".$row['blogid']."><img src=./images/edit_item.png alt=Edit border=0></a></td><td align=center><a onclick=\"return confirm('Are you sure?')\" href=./blog_del.php?id=".$row['blogid']."><img src=./images/del_item.png alt=Delete border=0></a></td></tr>";
 			}
+			echo"</table>"
 		?>
-                </table>
-              
-              </div></td>
-            </tr>
-          </table>
-          <p>&nbsp;</p>
-         </div></td>
+        </div></td>
       </tr>
       <tr>
-        <td width="40">&nbsp;</td>
-        <td colspan="2">&nbsp;</td>
+        <td width="91">&nbsp;</td>
+        <td width="809" colspan="2">&nbsp;</td>
       </tr>
       <tr>
         <td colspan="3">
         <a name="add">
-        <table width="902" border="0" cellspacing="0" cellpadding="0" style="margin:10px;">
-            <tr>
-              <td id="profile_top"></td>
-            </tr>
-            <tr>
-              <td id="profile_mid" valign="top"><div align="center">
-              <form name="form1" method="post" action="./blog_add_db.php" >
+	    <form name="form1" method="post" action="./blog_add_db.php" >
         <input type="hidden" name="login" value="<?=$_SESSION['cuser']; ?>">      
-        <table width="900" height="181" border="0" align="center" cellpadding="0" cellspacing="0">
-          
-          
+        <table id="blogform" width="900" height="312" border="0" align="center" cellpadding="0" cellspacing="0" style="display :none;">
+          <tr>
+            <td colspan="3" id="head_txt2">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3" id="head_txt4">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3" id="head_txt">&nbsp;</td>
+          </tr>
           <tr>
             <td colspan="3" id="head_txt">Post Blog</td>
           </tr>
           <tr>
-            <td colspan="3" id="head_txt3"><hr color="#990000" width="95%" size="1px" /></td>
+            <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
           </tr>
           <tr>
-            <td width="396"><div align="right" class="style1"><strong>Blog Subject :&nbsp;</strong></div></td>
-            <td width="476"><div align="left"><span id="sprytextfield1">
+            <td width="396"><div align="right" class="style1">Blog Subject : </div></td>
+            <td width="459"><div align="left"><span id="sprytextfield1">
               <label>
                 <input name="subject" type="text" size="50" />
               </label>
               <span class="textfieldRequiredMsg">A value is required.</span></span></div></td>
-	            <td width="28">&nbsp;</td>
+	            <td width="45">&nbsp;</td>
           </tr>
           <tr>
-            <td><div align="right" class="style2">Blog Text :&nbsp;</div></td>
+            <td><div align="right" class="style1">Blog Text : </div></td>
             <td><div align="left"><span id="sprytextarea1">
               <label>
                 <textarea name="blog_text" cols="35" rows="4" id="textfield3"></textarea>
@@ -147,14 +128,13 @@
                 </label>
             </div></td>
           </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
         </table>
-	    </form>
-              </div></td>
-            </tr>
-            <tr>
-              <td id="profile_bot">&nbsp;</td>
-            </tr>
-          </table>	    </td>
+	    </form></td>
       </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
@@ -173,6 +153,9 @@
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
 //-->
+</script>
+<script>
+  document.getElementById('blg').style.color = "#FFCC00";
 </script>
 </body>
 </html>

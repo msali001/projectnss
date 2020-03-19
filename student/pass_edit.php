@@ -16,7 +16,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -59,7 +59,7 @@
               <td>&nbsp;</td>
               <td><label>
                 <input type="submit" name="button" id="but_sub" value="CHANGE" />
-                <input type="button" name="button2" id="but_sub" value="Cancel" onclick="location.href='./profile.php'" />
+                 <input type="button" name="button2" id="but_sub" value="Cancel" onclick="location.href='./profile.php'" />
               </label></td>
             </tr>
           </table>
@@ -93,6 +93,9 @@ function chk_fld()
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
 //-->
+</script>
+<script>
+  document.getElementById('pro').style.color = "#FFCC00";
 </script>
 </body>
 </html>

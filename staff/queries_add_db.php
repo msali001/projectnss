@@ -10,7 +10,11 @@
 	//$student=get_studname($con,$login);
 	$dt=$_POST['txtDate'];
 	echo "insert into query (querysubject,querydate,querytext,staffid, querystatus) values('$subject','$dt','$text','$faculty','Unanswered')";
+<<<<<<< HEAD
+	mysqli_query($con,"insert into query (querysubject,querydate,querytext,staffid,querystatus) values('$subject','$dt','$text','$faculty','Unanswered')");
+=======
 	mysqli_query($con,"insert into query (querysubject,querydate,querytext,staffid, querystatus) values('$subject','$dt','$text','$faculty','Unanswered')");
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
 
-	header("location: ./queries.php?msg=Query Added");
+	header("location: ./queries.php?msg=Notification Added");
 ?>

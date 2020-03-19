@@ -25,7 +25,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -66,21 +66,25 @@
               <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
             </tr>
             <tr>
-              <td width="396"><div align="right" class="style1"><strong>Question Subject :&nbsp; </strong></div></td>
-              <td width="309"><div align="left">
-                  <select name="sub" id="subject">
-                    <option value="ACCOUNT" selected="selected">ACCOUNT</option>
-                    <option value="ECONOMICS">ECONOMICS</option>
-                    <option value="MATHS">MATHS</option>
-                    <option value="SCIENCE">SCIENCE</option>
-                    <option value="JAVA">JAVA</option>
-                    <option value="PHP">PHP</option>
-                    <option value="ENGLISH">ENGLISH</option>
-                    <option value="MSOFFICE">MSOFFICE</option>
-                  </select>
-              </div></td>
-              <td width="195">&nbsp;</td>
-            </tr>
+                <td width="372"><div align="right" class="style1"><strong>Question Subject :&nbsp; </strong></div></td>
+                <td width="432"><div align="left">
+                    <select name="sub" id="subject">
+                            <option value="Computer fundamentals and html">Computer fundamentals and html</option>
+                            <option value="Problem solving using c">Problem solving using c</option>
+                            <option value="Data structure using c">Data structure using c</option>
+                            <option value="Database management system and rdbms">Database management system and rdbms</option>
+                            <option value="Java programming">Java programming</option>
+                            <option value="Web programming using php">Web programming using php</option>
+                            <option value="Computer organization and architecture">Computer organization and architecture</option>
+                            <option value="Principles of software engineering   ">Principles of software engineering</option>
+                            <option value="Android programming">Android programming</option>
+                            <option value="Computer network">Computer network</option>
+                            <option value="System software">System software</option>
+                            <option value="Operating system">Operating system</option>
+                    </select>
+                </div></td>
+                <td width="98">&nbsp;</td>
+              </tr>
             <tr>
               <td><div align="right" class="style2">Question Text :&nbsp; </div></td>
               <td><div align="left">
@@ -173,4 +177,7 @@
 <?
 	echo"<script>form1.subject.value='".$row['quesubject']."'; form1.ans.value='".$row['queansfinal']."';</script>"; 
 ?>
+<script>
+  document.getElementById('exa').style.color = "#FFCC00";
+</script>
 </html>

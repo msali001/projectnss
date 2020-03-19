@@ -9,5 +9,5 @@
 	$dt=$_POST['txtDate'];
 	mysqli_query($con,"insert into query (querysubject,querydate,querytext,staffid,querystatus) values('$subject','$dt','$text','$faculty','Unanswered')");
 
-	header("location: ./queries.php?msg=Query Added");
+	header("location: ./queries.php?msg=Notification Added");
 ?>

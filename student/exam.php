@@ -168,5 +168,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
+<script>
+  document.getElementById('exa').style.color = "#FFCC00";
+</script>
 </body>
 </html>

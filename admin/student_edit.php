@@ -24,7 +24,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -73,6 +73,15 @@
         <td><div align="left">
           <label>
           <input name="lastname" type="text" id="textfield3" size="35" value="<?=$row['studlastname']; ?>" />
+          </label>
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="right" class="style1">Student Phone No : </div></td>
+        <td><div align="left">
+          <label>
+          <input name="phoneno" type="text" id="textfield3" size="35" value="<?=$row['studphoneno']; ?>" />
           </label>
         </div></td>
         <td>&nbsp;</td>
@@ -152,5 +161,7 @@ function chk_fld()
 <?
 	echo"<script>form1.semester.value='".$row['studsemester']."';</script>";
 ?>
-
+<script>
+  document.getElementById('std').style.color = "#FFCC00";
+</script>
 </html>

@@ -106,11 +106,18 @@
         <?
 			$rs=mysqli_query($con,"select * from examresult where studid='$user' order by examid desc");
 			$i=1;
+			if(mysqli_num_rows($result)>0)
+			{
 			while($r=mysqli_fetch_array($rs))
 			{
 				echo"<tr><td align=center width=6%>$i</td><td align=left width=61%>&nbsp;&nbsp;<a href=./exam_detail.php?id=".$r['examid'].">".$r['examsubject']."</a></td><td align=center width=11%><a href=./exam_detail.php?id=".$r['examid']."><img src=./images/detail_item.png alt=Detail border=0></a></td></tr>";
 				$i++;
 			}
+		}
+		 else
+		    {
+		       echo"<tr><td align=center width=25%>No  blogs</td></tr>";
+		     }  	
 		?>
       </table>
     </div></td>
@@ -146,4 +153,7 @@
 <?
 	echo"<script>form1.semester.value='".$row['studsemester']."';</script>";
 ?>
+<script>
+  document.getElementById('stud').style.color = "#FFCC00";
+</script>
 </html>

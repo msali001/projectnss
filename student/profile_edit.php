@@ -27,7 +27,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -51,7 +51,7 @@
               <tr>
                 <td width="12" colspan="3"><div align="center">
                   <form id="form1" name="form1" method="post" action="./profile_edit_db.php">
-                    <input name="id" type="hidden" value="<?=$row['studid']; ?>" />
+                    <input name="id" required="required" type="hidden" value="<?=$row['studid']; ?>" />
                     <table width="900" height="277" border="0" align="center" cellpadding="0" cellspacing="0">
                       
                       <tr>
@@ -64,7 +64,7 @@
                         <td width="401"><div align="right" class="style2">Student Surname : </div></td>
                         <td width="223"><div align="left">
                             <label>
-                            <input name="surname" type="text" size="35" value="<?=$row['studsurname']; ?>" />
+                            <input name="surname" required="required" type="text" size="35" value="<?=$row['studsurname']; ?>" />
                             </label>
                         </div></td>
                         <td width="276">&nbsp;</td>
@@ -73,7 +73,7 @@
                         <td><div align="right" class="style2">Student Firstname : </div></td>
                         <td><div align="left">
                             <label>
-                            <input name="firstname" type="text" id="textfield2" size="35" value="<?=$row['studfirstname']; ?>" />
+                            <input name="firstname" required="required" type="text" id="textfield2" size="35" value="<?=$row['studfirstname']; ?>" />
                             </label>
                         </div></td>
                         <td>&nbsp;</td>
@@ -82,7 +82,7 @@
                         <td><div align="right" class="style2">Student Lastname : </div></td>
                         <td><div align="left">
                             <label>
-                            <input name="lastname" type="text" id="textfield3" size="35" value="<?=$row['studlastname']; ?>" />
+                            <input name="lastname" required="required" type="text" id="textfield3" size="35" value="<?=$row['studlastname']; ?>" />
                             </label>
                         </div></td>
                         <td>&nbsp;</td>
@@ -141,6 +141,9 @@
 </table>
 <?
 	echo"<script>form1.semester.value='".$row['studsemester']."';</script>";
-?>	
+?>
+<script>
+  document.getElementById('pro').style.color = "#FFCC00";
+</script>	
 </body>
 </html>

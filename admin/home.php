@@ -64,11 +64,19 @@
 						echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./queries_detail.php?id=".$row['queryid'].">".substr($row['querysubject'],0,22)."...</a></td></tr>";
 				}
 			}
+<<<<<<< HEAD
+			
+=======
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
 			else
 			{
 						echo"<tr><td align=center width=25%>No  Notifications</td></tr>";
 			}	
 		?>
+<<<<<<< HEAD
+        	<tr><td align="center"><strong><a href="./queries.php">More..</a></strong></td></tr>
+=======
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
                 </table>
                 </div></td>
               </tr>
@@ -89,11 +97,25 @@
                       <?
 			include("./config.php");
 			$result=mysqli_query($con,"select * from blog order by blogid desc limit 0,5");
+<<<<<<< HEAD
+			if(mysqli_num_rows($result)>0)
+			 {
+			   while($row=mysqli_fetch_array($result))
+			      {
+				echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
+			       }
+		         }	
+		        else
+			{
+						echo"<tr><td align=center width=25%>No  blogs</td></tr>";
+			}		
+=======
 			while($row=mysqli_fetch_array($result))
 			{
 				echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
 			}
 			
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
 		?>
         	<tr><td align="center"><strong><a href="./blog.php">More..</a></strong></td></tr>
                     </table>

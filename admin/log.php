@@ -56,7 +56,7 @@
         <td colspan="3"><div align="center">
         <?
 			include("./config.php");
-			echo"<table border=0 id=border width=90%><tr><td id=border align=center>Student Name</td><td id=border align=center>login Date & Time</td><td id=border align=center>logout Date & Time</td></tr>";
+			echo"<table border=0 id=border width=90%><tr><td id=border align=center> Name</td><td id=border align=center>login Date & Time</td><td id=border align=center>logout Date & Time</td></tr>";
 			$result=mysqli_query($con,"select * from logtable order by logindate");
 			while($row=mysqli_fetch_array($result))
 			{

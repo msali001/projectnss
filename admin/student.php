@@ -137,6 +137,19 @@
             </div></td>
             <td>&nbsp;</td>
           </tr>
+<<<<<<< HEAD
+          
+          <tr>
+            <td><div align="right" class="style1">Student Phone No. : </div></td>
+            <td><div align="left">
+                <label>
+                <input name="phoneno" type="text" id="textfield3" size="35" />
+                </label>
+            </div></td>
+            <td>&nbsp;</td>
+          </tr>
+=======
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
         
           <tr>
             <td><div align="right" class="style1">Student Semester : </div></td>

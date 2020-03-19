@@ -113,13 +113,13 @@
         <input type="hidden" name="login" value="<?=$_SESSION['cuser']; ?>">      
         <table width="900" height="248" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td height="42" colspan="3" id="head_txt">Add Query</td>
+            <td height="42" colspan="3" id="head_txt">Add Notification</td>
           </tr>
           <tr>
             <td colspan="3"><hr color="#990000" size="1px" width="95%" /></td>
           </tr>
           <tr>
-            <td width="396"><div align="right" class="style1">Query Subject : </div></td>
+            <td width="396"><div align="right" class="style1">Notification Subject : </div></td>
             <td width="452"><div align="left"><span id="sprytextfield1">
               <label>
                 <input name="subject" type="text" size="35" />
@@ -128,7 +128,7 @@
 	            <td width="52">&nbsp;</td>
           </tr>
           <tr>
-            <td height="31"><div align="right" class="style1">Query Date : </div></td>
+            <td height="31"><div align="right" class="style1">Notification Date : </div></td>
             <td><div align="left">
 <span id="sprytextfield2">
 <input type="text" name="txtDate" maxlength="10" size="15" value="" />
@@ -136,7 +136,7 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td height="73"><div align="right" class="style1">Query Text : </div></td>
+            <td height="73"><div align="right" class="style1">Notification Text : </div></td>
             <td><div align="left"><span id="sprytextarea1">
               <label>
                 <textarea name="query_text" cols="35" rows="4" id="textfield3"></textarea>
@@ -273,5 +273,8 @@ function ValidateForm(){
 	}
     return true
  }
+</script>
+<script>
+  document.getElementById('quri').style.color = "#FFCC00";
 </script>
 </html>

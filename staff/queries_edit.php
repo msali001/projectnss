@@ -28,7 +28,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -59,13 +59,13 @@
               
               
               <tr>
-                <td colspan="3" id="head_txt">Edit Query</td>
+                <td colspan="3" id="head_txt">Edit Notification</td>
               </tr>
               <tr>
                 <td colspan="3" id="head_txt3"><hr color="#CCCCCC" size="1px" /></td>
               </tr>
               <tr>
-                <td width="396"><div align="right" class="style1">Query Subject : </div></td>
+                <td width="396"><div align="right" class="style1">Notification Subject : </div></td>
                 <td width="309"><div align="left">
                     <label>
                     <input name="subject" type="text" size="35" value="<?=$row['querysubject']; ?>" />
@@ -74,14 +74,14 @@
                 <td width="195">&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style1">Query Date : </div></td>
+                <td><div align="right" class="style1">Notification Date : </div></td>
                 <td><div align="left">
                     <input type="text" name="txtDate" maxlength="10" size="15" value="<?=$row['querydate']; ?>" />
                   (dd/mm/yyyy)</div></td>
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td><div align="right" class="style1">Query Text : </div></td>
+                <td><div align="right" class="style1">Notification Text : </div></td>
                 <td><div align="left">
                     <label>
                     <textarea name="query_text" cols="35" rows="4" id="textfield3"><?=$row['querytext']; ?></textarea>
@@ -233,4 +233,7 @@ function ValidateForm(){
 <?
 	echo"<script>form1.faculty.value='".get_staffname($con,$row['staffid'])."';</script>";
 ?>
+<script>
+  document.getElementById('quri').style.color = "#FFCC00";
+</script>
 </html>

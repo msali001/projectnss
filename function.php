@@ -27,6 +27,7 @@
 	{
 		//$date=date("d/m/Y");
 		//$time=date("H:i:s");
+		echo "insert into logtable (loginid,logindate,logintime) values('$user',CURDATE(),CURRENT_TIME())";
 		mysqli_query($con,"insert into logtable (loginid,logindate,logintime) values('$user',CURDATE(),CURRENT_TIME())");
 	}
 	function logout_log($con,$usr)

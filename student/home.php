@@ -89,11 +89,17 @@
                       <?
 			include("./config.php");
 			$result=mysqli_query($con,"select * from blog order by blogid desc limit 0,5");
+			if(mysqli_num_rows($result)>0)
+			 {
 			while($row=mysqli_fetch_array($result))
 			{
 				echo"<tr><td align=left width=25%>&nbsp;&nbsp;&bull;&nbsp;<a href=./blog_detail.php?id=".$row['blogid'].">".substr($row['blogtext'],0,22)."...</a></td></tr>";
 			}
-			
+		     }
+		          else
+			      {
+						echo"<tr><td align=center width=25%>No Blogs</td></tr>";
+			        }	
 		?>
         	<tr><td align="center"><strong><a href="./blog.php">More..</a></strong></td></tr>
                     </table>
@@ -147,7 +153,7 @@
               <tr>
                 <td><div align="center"><a href="./profile.php"><img src="images/profile_icon.jpg" alt="Profile" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./staff.php"><img src="images/person2_f2.png" alt="Student" width="32" height="32" border="0" /></a></div></td>
-                <td><div align="center"><a href="./queries.php"><img src="images/query.png" alt="Queries" width="32" height="33" border="0" /></a></div></td>
+                
                 <td><div align="center"><a href="./log.php"><img src="images/history_f2.png" alt="Log" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./exam.php"><img src="images/copy_f2.png" alt="Exam" width="32" height="32" border="0" /></a></div></td>
                 <td><div align="center"><a href="./assignment.php"><img src="images/address_f2.png" alt="Assignment" width="32" height="31" border="0" /></a></div></td>

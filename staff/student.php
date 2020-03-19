@@ -151,7 +151,11 @@ select{
   </tr>
 </table>
 	<script>
+<<<<<<< HEAD
+  document.getElementById('stud').style.color = "#FFCC00";
+=======
   document.getElementById('std').style.color = "#FFCC00";
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
 </script>
 </body>
 </html>

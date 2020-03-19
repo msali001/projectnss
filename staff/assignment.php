@@ -198,6 +198,8 @@ var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "date", {format:"dd/mm/yyyy"});
 //-->
 </script>
-</body>
+<script>
+  document.getElementById('ass').style.color = "#FFCC00";
 </script>
+</body>
 </html>

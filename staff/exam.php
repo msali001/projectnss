@@ -269,5 +269,8 @@ var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
 var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
 //-->
 </script>
+<script>
+  document.getElementById('exa').style.color = "#FFCC00";
+</script>
 </body>
 </html>

@@ -144,6 +144,15 @@
         <td>&nbsp;</td>
       </tr>
       <tr>
+        <td><div align="right" class="style1">Staff Phone No : </div></td>
+        <td><div align="left">
+          <label>
+          <input name="phoneno" type="text" id="textfield3" size="35" value="<?=$row['staffphoneno']; ?>" />
+          </label>
+        </div></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
         <td><div align="right" class="style1">Staff Designation : </div></td>
         <td><div align="left">
           <label>

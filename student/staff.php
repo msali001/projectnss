@@ -84,6 +84,8 @@ select{
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
-	
+<script>
+  document.getElementById('sta').style.color = "#FFCC00";
+</script>	
 </body>
 </html>

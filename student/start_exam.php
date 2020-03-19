@@ -34,7 +34,7 @@
   <tr>
     <td width="100%" id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -85,6 +85,7 @@
 		}
 		if(!$is_exam) {
 		        echo "<h4>No Exam Currently</h1>";
+		       
 	        }
 	        else{
 		        
@@ -123,5 +124,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
+<script>
+  document.getElementById('exa').style.color = "#FFCC00";
+</script>
 </body>
 </html>

@@ -14,7 +14,7 @@
     <td colspan="3" id="box_border" valign="top" align="center"><div align="center">
       <table border="0" width="98%">
         <?
-			$rs=mysqli_query($con,"select * from examresult where studid='nayan' order by examid desc");
+			$rs=mysqli_query($con,"select * from examresult where studid='$user' order by examid desc");
 			$i=1;
 			while($r=mysqli_fetch_array($rs))
 			{

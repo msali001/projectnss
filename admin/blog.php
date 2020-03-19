@@ -52,7 +52,11 @@
       </tr>
       <tr>
         <td>&nbsp;</td>
+<<<<<<< HEAD
+        <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/css_f2.png" alt="Add" border="0"></a></div></td>
+=======
         <td width="43" valign="middle"><div align="left" style="margin:3px"><a href="#add" style="text-decoration:none; color:#990000"><img src="images/add_item.png" alt="Add" border="0"></a></div></td>
+>>>>>>> 4004148899381ce22e9cf4857169e155a8c976d3
         <td width="766" valign="middle"><div align="left"><a href="#add" onclick="document.getElementById('blogform').style.display='block'" style="text-decoration:none; color:#990000"><strong>Add Blog</strong></a></div></td>
       </tr>
       <tr>

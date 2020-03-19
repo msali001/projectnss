@@ -32,7 +32,7 @@
   <tr>
     <td id="top"><table width="100%" height="32" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a href="./logout.php">Logout</a></strong></div></td>
+        <td width="98%"><div align="right">Welcome <strong><? echo $_SESSION['cuser']; ?> - <a onclick="return confirm('Are you sure?')" href="./logout.php">Logout</a></strong></div></td>
         <td width="2%">&nbsp;</td>
       </tr>
     </table></td>
@@ -99,20 +99,14 @@
                 <td><div align="right" class="style1"><strong>Student Semester :&nbsp; </strong></div></td>
                 <td><div align="left">
                     <label>
-                    <select name="sem" style="width:200px;">
-                      <option value="BCA-1" selected="selected">BCA-1</option>
-                      <option value="BCA-2">BCA-2</option>
-                      <option value="BCA-3">BCA-3</option>
-                      <option value="BCA-4">BCA-4</option>
-                      <option value="BCA-5">BCA-5</option>
-                      <option value="BCA-6">BCA-6</option>
-                      <option value="FYBCOM">FYBCOM</option>
-                      <option value="SYBCOM">SYBCOM</option>
-                      <option value="TYBCOM">TYBCOM</option>
-                      <option value="FYBBA">FYBBA</option>
-                      <option value="SYBBA">SYBBA</option>
-                      <option value="TYBBA">TYBBA</option>
-                    </select>
+                    <select name="semester" style="width:200px;">
+            <option value="CS-1" selected="selected">CS-1</option>
+                  <option value="CS-2">CS-2</option>
+                  <option value="CS-3">CS-3</option>
+                  <option value="CS-4">CS-4</option>
+                  <option value="CS-5">CS-5</option>
+                  <option value="CS-6">CS-6</option>
+          </select>
                     </label>
                 </div></td>
                 <td>&nbsp;</td>
@@ -249,4 +243,7 @@ function ValidateForm(){
 <?
 	echo"<script>form1.sem.value='".$row['studsemester']."';</script>";
 ?>
+<script>
+  document.getElementById('ass').style.color = "#FFCC00";
+</script>
 </html>

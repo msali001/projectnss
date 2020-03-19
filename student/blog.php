@@ -99,5 +99,8 @@
     <td id="footer"><? include("./footer.php"); ?></td>
   </tr>
 </table>
+<script>
+  document.getElementById('blg').style.color = "#FFCC00";
+</script>
 </body>
 </html>
